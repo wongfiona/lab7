@@ -11,3 +11,11 @@ $(document).ready(function() {
 function initializePage() {
 	// your code here
 }
+
+$(".likeBtn").click(likeButton);
+
+function likeButton(e) { 
+    // prevent the page from reloading 
+    e.preventDefault();
+		ga('send', 'event', 'like', 'click');
+}
